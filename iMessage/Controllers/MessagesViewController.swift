@@ -22,8 +22,6 @@ class MessagesViewController: UIViewController {
         
         messagesTableView.register(UINib(nibName: K.Messages.cellNibName, bundle: nil), forCellReuseIdentifier: K.Messages.cellIdentifier)
         
-        // messagesTableView.register(UINib(nibName: K.Headers.sectionHeaderNibName, bundle: nil), forHeaderFooterViewReuseIdentifier: K.Headers.sectionHeaderIdentifier)
-        
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
     }

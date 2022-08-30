@@ -9,17 +9,31 @@ import UIKit
 
 struct K {
     
-//    struct Headers {
-//
-//        static let sectionHeaderIdentifier = "ReusableSectionHeaderCell"
-//        static let sectionHeaderNibName = "SectionHeaderCell"
-//
-//    }
+    struct AllMessages {
+        
+        static let cellIdentifier = "ReusableMessageCell"
+        static let cellNibName = "AllMessagesDetailCell"
+        static let segueIdentifier = "goToChat"
+        
+    }
     
     struct Messages {
         
         static let cellIdentifier = "ReusableMessageCell"
         static let cellNibName = "MessageDetailCell"
+        
+    }
+    
+    struct SystemNames {
+        
+        static let muted = "bell.slash"
+        
+    }
+    
+    struct Text {
+        
+        static let cellIdentifier = "ReusableMessageCell"
+        static let cellNibName = "TextMessageDetailCell"
         
     }
     

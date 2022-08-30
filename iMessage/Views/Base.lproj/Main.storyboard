@@ -45,26 +45,70 @@
             </objects>
             <point key="canvasLocation" x="860.86956521739137" y="154.6875"/>
         </scene>
-        <!--All Messages View Controller-->
+        <!--Messages-->
         <scene sceneID="Tqh-Rm-Xbq">
             <objects>
                 <viewController id="3xY-PU-eyD" customClass="AllMessagesViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gND-TW-1Ek">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SEu-2J-tzr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <inset key="separatorInset" minX="75" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="b0J-xU-vbB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SEu-2J-tzr" firstAttribute="bottom" secondItem="b0J-xU-vbB" secondAttribute="bottom" id="50n-Z4-W08"/>
+                            <constraint firstItem="SEu-2J-tzr" firstAttribute="trailing" secondItem="b0J-xU-vbB" secondAttribute="trailing" id="VMK-3J-WQh"/>
+                            <constraint firstItem="SEu-2J-tzr" firstAttribute="leading" secondItem="b0J-xU-vbB" secondAttribute="leading" id="jLz-fc-T1m"/>
+                            <constraint firstItem="SEu-2J-tzr" firstAttribute="top" secondItem="gND-TW-1Ek" secondAttribute="top" id="yD2-Jn-rJe"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xen-Wy-LeE"/>
+                    <navigationItem key="navigationItem" title="Messages" id="gMC-IH-9le"/>
                     <connections>
-                        <segue destination="s0l-lV-LQT" kind="show" id="qIU-fb-ZFf"/>
+                        <outlet property="allMessagesTableView" destination="SEu-2J-tzr" id="xzP-AD-0Z3"/>
+                        <segue destination="mY0-mJ-2M4" kind="show" identifier="goToChat" id="Wgj-we-Ocj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgW-d6-JqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1644.9275362318842" y="154.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Natasha-->
+        <scene sceneID="Xfk-a1-0es">
+            <objects>
+                <viewController id="mY0-mJ-2M4" customClass="ChatViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfb-TI-k1W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U1w-nw-ff2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EaD-Uz-Jh5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EaD-Uz-Jh5" firstAttribute="trailing" secondItem="U1w-nw-ff2" secondAttribute="trailing" id="TJJ-Aj-V6E"/>
+                            <constraint firstItem="U1w-nw-ff2" firstAttribute="top" secondItem="EaD-Uz-Jh5" secondAttribute="top" id="XFL-eL-phN"/>
+                            <constraint firstItem="U1w-nw-ff2" firstAttribute="leading" secondItem="EaD-Uz-Jh5" secondAttribute="leading" id="dnH-r7-VKn"/>
+                            <constraint firstItem="EaD-Uz-Jh5" firstAttribute="bottom" secondItem="U1w-nw-ff2" secondAttribute="bottom" id="hf6-Q4-OqG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Natasha" id="648-WL-cSi"/>
+                    <connections>
+                        <outlet property="textMessagesTableView" destination="U1w-nw-ff2" id="MJH-jW-dYX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEw-kX-nHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="155"/>
+        </scene>
+        <!--Unknwn-->
         <scene sceneID="Wef-cD-oq8">
             <objects>
                 <viewController id="dco-Zn-THl" sceneMemberID="viewController">
@@ -74,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="JVm-fq-0xp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ebC-oX-WBT"/>
+                    <navigationItem key="navigationItem" title="Unknwn" id="ebC-oX-WBT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgE-cO-k1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,23 +143,7 @@
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="154.6875"/>
         </scene>
-        <!--Natasha Khazzam-->
-        <scene sceneID="bZQ-iu-wBF">
-            <objects>
-                <viewController id="s0l-lV-LQT" customClass="ChatViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4y2-ii-Ift">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vOT-wQ-E7H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Natasha Khazzam" id="zHJ-1J-0IG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dGQ-1V-JMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2384" y="155"/>
-        </scene>
-        <!--View Controller-->
+        <!--Known-->
         <scene sceneID="tDF-F5-tdz">
             <objects>
                 <viewController id="7Co-vr-sNo" sceneMemberID="viewController">
@@ -125,7 +153,7 @@
                         <viewLayoutGuide key="safeArea" id="Nf8-iA-5z6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="74p-LE-IKB"/>
+                    <navigationItem key="navigationItem" title="Known" id="74p-LE-IKB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIh-dO-ORn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
